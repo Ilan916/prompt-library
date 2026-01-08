@@ -1,11 +1,23 @@
+import { getAllPrompts } from "./(features)/Prompts/services/getAllPrompt";
 import Header from "./components/Header";
+import PromptList from "./(features)/Prompts/components/PromptList";
 
-export default function Home() {
+export default async function Home() {
+  const prompts = await getAllPrompts();
   return (
     <div>
       <Header />
-    
-      <h1 className="text-slate-200 text-center">Home List des prompts</h1>
+      <PromptList
+        prompts={prompts.map((p) => ({
+          id: p.id,
+          publicId: p.publicId,
+          title: p.title,
+          objective: p.objective,
+          score: p.score,
+          createdAt: p.createdAt,
+          previewImageUrl: null,
+        }))}
+      />
     </div>
   );
 }
