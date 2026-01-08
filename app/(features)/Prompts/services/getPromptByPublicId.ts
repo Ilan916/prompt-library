@@ -15,14 +15,6 @@ export async function getPromptByPublicId(publicId: string) {
     getPromptAuthor(base.authorId ?? null),
   ]);
 
-  // Debug logging to help trace why steps may be missing
-  try {
-    // eslint-disable-next-line no-console
-    console.log(`getPromptByPublicId: base.id=${base.id} publicId=${publicId} steps=${steps?.length ?? 0}`);
-  } catch (e) {
-    /* ignore logging errors */
-  }
-
   return {
     ...base,
     steps,

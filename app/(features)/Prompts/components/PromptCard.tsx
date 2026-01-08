@@ -1,14 +1,6 @@
 import Link from "next/link";
+import Prompt from "../types/promptType";
 
-type Prompt = {
-  id: string;
-  publicId?: string;
-  title: string;
-  objective: string;
-  score?: number;
-  createdAt?: string | Date;
-  previewImageUrl?: string | null;
-};
 
 export default function PromptCard({ prompt }: { prompt: Prompt }) {
   return (
@@ -25,7 +17,7 @@ export default function PromptCard({ prompt }: { prompt: Prompt }) {
             </div>
           </div>
 
-          <div className="w-24 h-24 rounded-md bg-slate-700 overflow-hidden flex-shrink-0">
+          <div className="w-24 h-24 rounded-md bg-slate-700 overflow-hidden shrink-0">
             {prompt.previewImageUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={prompt.previewImageUrl} alt={prompt.title} className="w-full h-full object-cover" />

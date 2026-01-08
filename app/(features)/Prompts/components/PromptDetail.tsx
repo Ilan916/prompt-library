@@ -1,7 +1,7 @@
 import PromptMeta from "./PromptMeta";
 import PromptSteps from "./PromptSteps"
+import Author from "../types/authorType";
 
-type Author = { id: string; username?: string | null; firstName?: string | null; lastName?: string | null } | null;
 
 export default function PromptDetail({ data }: { data: any & { author?: Author } }) {
   return (

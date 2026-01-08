@@ -1,14 +1,5 @@
 import PromptCard from "./PromptCard";
-
-type Prompt = {
-  id: string;
-  publicId?: string;
-  title: string;
-  objective: string;
-  score?: number;
-  createdAt?: string | Date;
-  previewImageUrl?: string | null;
-};
+import Prompt from "../types/promptType";
 
 export default function PromptList({ prompts }: { prompts: Prompt[] }) {
   return (
