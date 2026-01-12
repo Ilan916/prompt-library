@@ -16,7 +16,6 @@ export default function PromptList({ prompts }: { prompts: Prompt[] }) {
                 objective: p.objective,
                 score: p.score,
                 createdAt: p.createdAt,
-                previewImageUrl: p.previewImageUrl ?? null,
               }}
             />
           ))}

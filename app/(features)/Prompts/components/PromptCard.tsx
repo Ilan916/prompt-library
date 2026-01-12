@@ -4,7 +4,7 @@ import Prompt from "../types/promptType";
 
 export default function PromptCard({ prompt }: { prompt: Prompt }) {
   return (
-    <article className="bg-slate-800 rounded-2xl overflow-hidden shadow-md">
+    <article className="bg-neutral-800 rounded-2xl overflow-hidden shadow-md">
       <div className="p-4">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1">
@@ -15,15 +15,6 @@ export default function PromptCard({ prompt }: { prompt: Prompt }) {
               <span className="text-slate-300 text-xs bg-slate-700/40 px-2 py-1 rounded-md">#devops</span>
               <span className="text-slate-300 text-xs bg-slate-700/40 px-2 py-1 rounded-md">#javascript</span>
             </div>
-          </div>
-
-          <div className="w-24 h-24 rounded-md bg-slate-700 overflow-hidden shrink-0">
-            {prompt.previewImageUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={prompt.previewImageUrl} alt={prompt.title} className="w-full h-full object-cover" />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center text-slate-400">No Image</div>
-            )}
           </div>
         </div>
       </div>

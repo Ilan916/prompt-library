@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 function Header() {
-  const authenticated = true; // replace with real auth state
+  const authenticated = false; // replace with real auth state
 
   const user = {
     name: "Ilan",

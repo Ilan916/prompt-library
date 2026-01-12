@@ -8,6 +8,13 @@
       "when": 1767816902283,
       "tag": "0000_crazy_human_cannonball",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1768235154640,
+      "tag": "0001_crazy_lockjaw",
+      "breakpoints": true
     }
   ]
 }
